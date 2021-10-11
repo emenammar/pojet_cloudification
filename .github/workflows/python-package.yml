@@ -34,9 +34,9 @@ jobs:
     - name: check docker installation
       run: docker run hello-world
     - name: push to docker hub
-      uses: docker/buid-push-action@v2.4.0
+      uses: docker/buid-push-action@v1
       with:
         username: ${{secrets.DOCKER_USERNAME}}
         password: ${{secrets.DOCKER_PASSWORD}}
-        repository: docker push emenammar/cloud_project 
+        repository: emenammar/cloud_project 
         tag_with_ref: true
