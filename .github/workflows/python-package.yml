@@ -34,7 +34,6 @@ jobs:
     - name: check docker installation
       run: docker run hello-world
     - name: push to docker hub
-      run: docker run hello-world
       uses: docker/buid-push-action@v2.4.0
       with:
         username: ${{secrets.DOCKER_USERNAME}}
