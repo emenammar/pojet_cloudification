@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: firstpod
+  labels:
+    app: flask
+spec:
+  template:
+    metadata:
+      name: firstpod
+      labels:
+        app: flask
+    spec:
+      containers:
+        - name: firstpod
+          image: emenammar/cloud_project
+  replicas: 4
+  selector:
+    matchLabels:
+      app: flask
