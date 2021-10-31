@@ -1,6 +1,8 @@
 FROM python
 COPY app.py /app
-COPY ./templates /app
+COPY ./templates/base.html /app
+COPY ./templates/list.html /app
+
 COPY Dockerfile /app
 COPY db.sqlite /app
 
